@@ -429,9 +429,6 @@ bool GMLIB_Actor::setProjectile(Actor& projectile, float speed, float offset) {
 }
 
 bool GMLIB_Actor::throwEntity(Actor& projectile, float speed, float offset) {
-    if (projectile.hasCategory(ActorCategory::Player)) {
-        return false;
-    }
     if (speed > 0) {
         return setProjectile(projectile, speed, offset);
     }
